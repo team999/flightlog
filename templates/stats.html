@@ -1,0 +1,32 @@
+  <h3>Flight Status</h3>
+    <p>
+      {{ flight.status }}
+    </p>
+  <h3>Tracking Objects</h3>
+    <ul id="tracked-list">
+      {% for trackable in flight.trackables.all %}
+        <li><span style="color: {{ trackable.html_colour }};" class="trackable-name">{{ trackable.name }}</span> 
+          <div class="critical-stats">
+            {% if trackable.current_position %}
+              {{ trackable.current_position.latitude }}&deg;, {{ trackable.current_position.longitude }}&deg;, {{ trackable.current_position.altitude }} metres<br>
+            {% else %}
+              No data
+            {% endif %}
+          </div><small>{{ trackable.current_position.at }}</small></li>
+      {% endfor %}
+    </ul>
+  <h3>Flight Log</h3>
+  <div id="log">
+    <table id="log">
+      {% for log_entry in flight.log_entries.all %}
+        <tr><td style="text-align: right;">{{ log_entry.at|date:"Y-m-d"}}<br>{{ log_entry.at|date:"H:i:s"}}</td>
+        {% if log_entry.position %}
+          <td><strong style="color: {{ log_entry.trackable.html_colour }};">{{ log_entry.trackable.name }}</strong> now at lat {{ log_entry.position.latitude }}&deg;, long {{ log_entry.position.longitude }}&deg;, altitude {{ log_entry.position.altitude }} metres. Position accuracy &plusmn; {{ log_entry.position.radius }} metres.</td>
+        {% endif %}
+        {% if log_entry.comment %}
+          <td><strong style="color: {{ log_entry.trackable.html_colour }};">{{ log_entry.trackable.name }}</strong> comment added "{{ log_entry.comment.text }}".</td>
+        {% endif %}
+        </tr>
+      {% endfor %}
+    </table>
+  </div>

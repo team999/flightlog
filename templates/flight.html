@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}{{ flight.name }} - Flight{% endblock %}
+
+{% block content %}
+<table id="main">
+  <tr>
+    <td>
+      {{ form.map }}
+      {{ form.media.js }}
+      <script>
+        var flight_url = '/flight/{{ flight.id }}';
+      
+        function update_overlay() {
+          $.getJSON(flight_url + '/circles', function(data) {
+            $('#id_map').removeCircles();
+            $('#id_map').addCircles(data);
+            $('#id_map').fitCircles();
+          });
+          $.getJSON(flight_url + '/polylines', function(data) {
+            $('#id_map').removePolylines();
+            $('#id_map').addPolylines(data);
+          });          
+        }
+        
+        function update_stats() {
+          $('#stats').load(flight_url + '/stats');
+        }
+      
+        function update() {
+          update_stats();
+          update_overlay();
+        }
+        
+        $(document).ready(function() {
+          setInterval(update, 5000);
+          update();
+        });
+      </script>
+    </td>
+    <td style="width: 550px;" id="stats">
+      Please wait while the stats load...
+    </td>
+  </tr>
+</table>  
+{% endblock %}

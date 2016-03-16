@@ -1,0 +1,4 @@
+# This is provisional, the original virtualenv is MIA, 2016-03-17 Michael Fincham <michael@hotplate.co.nz>
+
+django
+gjango-gmapi

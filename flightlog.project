@@ -1,0 +1,29 @@
+
+[indentation]
+indent_width=2
+indent_type=0
+indent_hard_tab_width=8
+detect_indent=false
+indent_mode=2
+
+[project]
+name=Flightlog
+base_path=/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/
+description=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=5
+FILE_NAME_0=3567;Python;0;16;1;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/settings.py;0
+FILE_NAME_1=1585;Python;0;16;1;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/main/models.py;0
+FILE_NAME_2=206;Python;0;16;1;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/main/admin.py;0
+FILE_NAME_3=273;Python;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/main/views.py;0
+FILE_NAME_4=952;HTML;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/templates/flight.html;0
+FILE_NAME_5=487;HTML;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/templates/base.html;0
+FILE_NAME_6=29;HTML;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/templates/map.html;0
+FILE_NAME_7=1488;Python;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/gmapi/forms/widgets.py;0
+FILE_NAME_8=448;Python;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/gmapi/maps.py;0
+FILE_NAME_9=9889;Javascript;0;16;0;1;0;/home/michael/.gvfs/sftp on cahuenga.hotplate.co.nz/srv/www/flightlog/gmapi/media/gmapi/js/jquery.gmapi.js;0

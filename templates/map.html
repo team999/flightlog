@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style>
+      body, html {
+         margin: 0; padding: 0; height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    {{ form.map }}
+    {{ form.media.js }}
+    <script>
+    
+      function update_markers() {
+        $.getJSON('ajax/test.json', function(data) {
+  var items = [];
+
+    
+      $(document).ready(function() {
+        $('#id_map').addMarkers($.parseJSON('{{ initial_markers|safe }}'));
+        $('#id_map').fitMarkers();
+      });
+    </script>
+  </body>
+</html>

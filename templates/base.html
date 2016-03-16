@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %} - Flightlog</title>
+    <style type="text/css">
+      body, html {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-face: sans-serif;
+      }
+
+      .trackable-name {
+        font-weight: bold;
+        font-size: 110%;
+      }
+      
+      .critical-stats {
+        font-size: 140%;
+      }
+      
+      .map {
+        height: 100%;
+        width: 100%;
+        
+      }
+      
+      #main { 
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      
+      #main tr {
+        height: 100%;
+      }
+      
+      #main td {
+        padding: 10px;
+        vertical-align: top;
+        height: 100%;
+      }
+      
+      #log {
+        height: 200px;
+        overflow: auto;
+      }
+      
+      #log td {
+        padding: 2px;
+        border-top: silver 1px solid;
+        vertical-align: top;
+      }
+      
+      #tracked-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      #tracked-list li {
+        padding: 5px 0;
+      }
+         
+    </style>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>
